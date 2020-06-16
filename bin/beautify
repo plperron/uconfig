@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+# Formats every python files in the project excluding the `venv` folder
+
+find . \( -path ./venv \) -prune -o -name '*.py' -exec \
+     python -m black --quiet {} \;
